@@ -99,13 +99,13 @@ Map item fields:
 
 - `teamId`: one of `NONE`, `WARDENS`, or `COLONIALS`.
 - `iconType`: the type of the map icon, see the [Map Icons](#map-icons) section
-- `x`, `y`: normalizd map coordinate
+- `x`, `y`: normalized map coordinate
 - `flags`: bitmask of flags that apply to this icon, see the [Map Flags](#map-flags) section
 
 Map text item fields:
 
 - `text`: text string as it would appear on the map ingame
-- `x`, `y`: normalizd map coordinate
+- `x`, `y`: normalized map coordinate
 
 ##### Map Icons
 
