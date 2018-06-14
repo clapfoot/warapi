@@ -137,10 +137,10 @@ Map text item fields:
     WorldMapTent    (24)
     TravelTent      (25)
     TrainingArea    (26)
-	SpecialBase     (27) v0.14
-	ObservationTower(28) v0.14
-	Fort            (29) v0.14
-	TroopShip       (30) v0.14
+    SpecialBase     (27) v0.14
+    ObservationTower(28) v0.14
+    Fort            (29) v0.14
+    TroopShip       (30) v0.14
 ```
 
 ##### Map Flags
