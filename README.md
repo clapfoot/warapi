@@ -130,13 +130,17 @@ Map text item fields:
     Shipyard          (18)
     TechCenter        (19)
 
-    SalvageField  (20)
-    ComponentField(21)
-    FuelField     (22)
-    SulfurField   (23)
-    WorldMapTent  (24)
-    TravelTent    (25)
-    TrainingArea  (26)
+    SalvageField    (20)
+    ComponentField  (21)
+    FuelField       (22)
+    SulfurField     (23)
+    WorldMapTent    (24)
+    TravelTent      (25)
+    TrainingArea    (26)
+	SpecialBase     (27) v0.14
+	ObservationTower(28) v0.14
+	Fort            (29) v0.14
+	TroopShip       (30) v0.14
 ```
 
 ##### Map Flags
