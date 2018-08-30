@@ -3,7 +3,7 @@
 
 ### Overview
 
-The War API allows developers to query information about the state of the current Foxhole World Conquest. 
+The War API allows developers to query information about the state of the current Foxhole World Conquest.
 
 1. [Schema](#schema)
 2. [Root Endpoint](#root-endpoint)
@@ -17,7 +17,7 @@ All data returned by the API is JSON. The API is accessed only via HTTPS at `htt
 
 ## Root Endpoint
 
-The base of all API requests is `https://war-service-live.foxholeservices.com/api`. In this documentation all API 
+The base of all API requests is `https://war-service-live.foxholeservices.com/api`. In this documentation all API
 endpoints will be specified relative to this root.
 
 ## API Endpoints
@@ -28,7 +28,7 @@ endpoints will be specified relative to this root.
 
 `GET /worldconquest/maps`
 
-Returns a list of the active World Conquest map names. 
+Returns a list of the active World Conquest map names.
 
 Note: The maps `HomeRegionC` and `HomeRegionW` are returned here, but do not have map data available in this version.
 
@@ -46,7 +46,7 @@ You only need to request this once per map between World Conquests.
 `GET /worldconquest/maps/:mapName/dynamic/public`
 
 Dynamic map data includes map icons that could change over the lifecycle of a map. This includes
-static bases and static base build sites. 
+static bases and static base build sites.
 
 Team-specific data for and forward bases are excluded.
 
@@ -66,9 +66,9 @@ All endpoints that return map data have the same response format:
     "x" : 0.21965122,
     "y" : 0.6231655,
     "flags" : 0
-  }, 
+  },
 
-  ...   
+  ...
 
  ],
   "mapTextItems" : [ {
@@ -141,6 +141,8 @@ Map text item fields:
     ObservationTower(28) v0.14
     Fort            (29) v0.14
     TroopShip       (30) v0.14
+    ScrapMine       (31) v0.16
+    SulfurMine      (32) v0.16
 ```
 
 ##### Map Flags
@@ -153,11 +155,11 @@ Map text item fields:
 
 ## Rate Limiting and Caching
 
-We ask that you respect the caching headers as returned by the API. They reflect the lifetime of the data 
+We ask that you respect the caching headers as returned by the API. They reflect the lifetime of the data
 returned in the body of the request and requests sooner than the cache expiry will return the same data.
 
 The API fully supports [ETags](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag).
-API responses include the `ETag` header. When you make an API request, include the `If-None-Match` 
+API responses include the `ETag` header. When you make an API request, include the `If-None-Match`
 header with the value of the `ETag` you last received from that endpoint. If the server returns `304 Not Modified`,
 then your cached data is still the latest version.
 
