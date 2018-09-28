@@ -143,6 +143,8 @@ Map text item fields:
     TroopShip       (30) v0.14
     ScrapMine       (31) v0.16
     SulfurMine      (32) v0.16
+    StorageFacility (33) v0.17
+	Factory         (34) v0.17
 ```
 
 ##### Map Flags
