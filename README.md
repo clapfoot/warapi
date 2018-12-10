@@ -60,6 +60,7 @@ All endpoints that return map data have the same response format:
 ```
 {
   "regionId" : 1,
+  "scorchedVictoryTowns": 0,
   "mapItems" : [ {
     "teamId" : "NONE",
     "iconType" : 22,
@@ -83,6 +84,11 @@ All endpoints that return map data have the same response format:
   "worldExtentsMinY" : -84705.41,
   "worldExtentsMaxX" : 78413.08,
   "worldExtentsMaxY" : 82011.05,
+  "warReport": {
+        "totalEnlistments": 126,
+        "colonialCasualties": 21,
+        "wardenCasualties": 16
+  },
   "lastUpdated" : 1524672871955,
   "version" : 2
 }
