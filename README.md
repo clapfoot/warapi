@@ -151,6 +151,9 @@ Map text item fields:
     SulfurMine      (32) v0.16
     StorageFacility (33) v0.17
     Factory         (34) v0.17
+    Garrison Station(35) v0.20
+    Ammo Factory	(36) v0.20
+    Rocket Site 	(37) v0.20
 ```
 
 ##### Map Flags
