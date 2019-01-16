@@ -87,7 +87,8 @@ All endpoints that return map data have the same response format:
   "warReport": {
         "totalEnlistments": 126,
         "colonialCasualties": 21,
-        "wardenCasualties": 16
+        "wardenCasualties": 16,
+        "dayOfWar": 5
   },
   "lastUpdated" : 1524672871955,
   "version" : 2
