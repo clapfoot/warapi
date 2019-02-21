@@ -156,7 +156,7 @@ Map text item fields:
     Garrison Station    (35) v0.20
     Ammo Factory	    (36) v0.20
     Rocket Site 	    (37) v0.20
-	Salvage Mine        (38) v0.22
+    Salvage Mine        (38) v0.22
 ```
 
 ##### Map Icon Colours
@@ -164,7 +164,6 @@ Map text item fields:
 There might not necessarily be a Colonial/Warden version of an icon.  In this case, it is recommended to use these colours for rendering Colonial and Warden versions of that icon.
 
 ```
-
 Colonial
 - (0.082283, 0.14996, 0.07036, 1.0)
 - RGB: (21, 38, 18)
@@ -176,7 +175,6 @@ Warden
 - RGB: (4, 23, 57, 255)
 - Hex Linear: 041739FF
 - Hex SRGB: 245682FF
-
 ```
 
 ##### Map Flags
