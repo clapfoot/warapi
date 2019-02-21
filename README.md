@@ -118,15 +118,15 @@ Map text item fields:
 ##### Map Icons
 
 ```
-    PortBase(4)
+    PortBase            (4)
 
-    StaticBase1(5)
-    StaticBase2(6)
-    StaticBase3(7)
+    StaticBase1         (5)
+    StaticBase2         (6)
+    StaticBase3         (7)
 
-    ForwardBase1(8)
-    ForwardBase2(9)
-    ForwardBase3(10)
+    ForwardBase1        (8)
+    ForwardBase2        (9)
+    ForwardBase3        (10)
 
     Hospital            (11)
     VehicleFactory      (12)
