@@ -10,7 +10,7 @@ The War API allows developers to query information about the state of the curren
 3. [API Endpoints](#api-endpoints)
     1. [Map Data](#map-data)
 4. [Rate Limiting and Caching](#rate-limiting-and-caching)
-5. [Discord] (#discord)
+5. [Discord](#discord)
 
 ## Schema
 
