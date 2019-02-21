@@ -154,8 +154,8 @@ Map text item fields:
     Storage Facility    (33) v0.17
     Factory             (34) v0.17
     Garrison Station    (35) v0.20
-    Ammo Factory	    (36) v0.20
-    Rocket Site 	    (37) v0.20
+    Ammo Factory        (36) v0.20
+    Rocket Site         (37) v0.20
     Salvage Mine        (38) v0.22
 ```
 
