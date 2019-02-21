@@ -10,6 +10,7 @@ The War API allows developers to query information about the state of the curren
 3. [API Endpoints](#api-endpoints)
     1. [Map Data](#map-data)
 4. [Rate Limiting and Caching](#rate-limiting-and-caching)
+5. [Discord] (#discord)
 
 ## Schema
 
@@ -127,42 +128,64 @@ Map text item fields:
     ForwardBase2(9)
     ForwardBase3(10)
 
-    Hospital          (11)
-    VehicleFactory    (12)
-    Armory            (13)
-    SupplyStation     (14)
-    Workshop          (15)
-    ManufacturingPlant(16)
-    Refinery          (17)
-    Shipyard          (18)
-    TechCenter        (19)
+    Hospital            (11)
+    VehicleFactory      (12)
+    Armory              (13)
+    Supply Station      (14)
+    Workshop            (15)
+    Manufacturing Plant (16)
+    Refinery            (17)
+    Shipyard            (18)
+    Tech Center         (19)
 
-    SalvageField    (20)
-    ComponentField  (21)
-    FuelField       (22)
-    SulfurField     (23)
-    WorldMapTent    (24)
-    TravelTent      (25)
-    TrainingArea    (26)
-    SpecialBase     (27) v0.14
-    ObservationTower(28) v0.14
-    Fort            (29) v0.14
-    TroopShip       (30) v0.14
-    ScrapMine       (31) v0.16
-    SulfurMine      (32) v0.16
-    StorageFacility (33) v0.17
-    Factory         (34) v0.17
-    Garrison Station(35) v0.20
-    Ammo Factory	(36) v0.20
-    Rocket Site 	(37) v0.20
+    Salvage Field       (20)
+    Component Field     (21)
+    Fuel Field          (22)
+    Sulfur Field        (23)
+    World Map Tent      (24)
+    Travel Tent         (25)
+    Training Area       (26)
+    Special Base (Keep) (27) v0.14
+    Observation Tower   (28) v0.14
+    Fort                (29) v0.14
+    Troop Ship          (30) v0.14
+    Scrap Mine          (31) v0.16
+    Sulfur Mine         (32) v0.16
+    Storage Facility    (33) v0.17
+    Factory             (34) v0.17
+    Garrison Station    (35) v0.20
+    Ammo Factory	    (36) v0.20
+    Rocket Site 	    (37) v0.20
+	Salvage Mine        (38) v0.22
+```
+
+##### Map Icon Colours
+
+There might not necessarily be a Colonial/Warden version of an icon.  In this case, it is recommended to use these colours for rendering Colonial and Warden versions of that icon.
+
+```
+
+Colonial
+- (0.082283, 0.14996, 0.07036, 1.0)
+- RGB: (21, 38, 18)
+- Hex Linear: 152612FF
+- Hex SRGB: 516C4BFF
+
+Warden
+- (0.017642, 0.093059, 0.223228, 1.0)
+- RGB: (4, 23, 57, 255)
+- Hex Linear: 041739FF
+- Hex SRGB: 245682FF
+
 ```
 
 ##### Map Flags
 
 ```
-    IsVictoryBase (0x01)
-    IsHomeBase    (0x02)
-    IsBuildSite   (0x04)
+    IsVictoryBase  (0x01)
+    IsHomeBase     (0x02)
+    IsBuildSite    (0x04)
+    IsScorched     (0x10) v0.22
 ```
 
 ## Rate Limiting and Caching
@@ -178,3 +201,9 @@ then your cached data is still the latest version.
 It is good practice to use the ETag, as even though the cache may have expired the underlying data may not have changed.
 For example in the case of dynamic map data, if no bases have changed teams within 5 minutes, the cache will have
 expired but requests using the ETag will return `304 Not Modified`, preventing wasting bandwidth on duplicate data.
+
+## Discord
+
+If you're looking for assistance or just want to chat about the WarAPI, there is a discord channel called `code-talk` on the official Foxhole discord.
+
+
