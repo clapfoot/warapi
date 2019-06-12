@@ -124,8 +124,6 @@ Map text item fields:
 ##### Map Icons
 
 ```
-    PortBase            (4)
-
     StaticBase1         (5)
     StaticBase2         (6)
     StaticBase3         (7)
@@ -155,7 +153,6 @@ Map text item fields:
     Observation Tower   (28) v0.14
     Fort                (29) v0.14
     Troop Ship          (30) v0.14
-    Scrap Mine          (31) v0.16
     Sulfur Mine         (32) v0.16
     Storage Facility    (33) v0.17
     Factory             (34) v0.17
@@ -163,6 +160,9 @@ Map text item fields:
     Ammo Factory        (36) v0.20
     Rocket Site         (37) v0.20
     Salvage Mine        (38) v0.22
+    Construction Yard   (39) v0.26
+    Component Mine      (40) v0.26
+    Oil Well            (41) v0.26
 ```
 
 ##### Map Icon Colours
@@ -190,6 +190,7 @@ Warden
     IsHomeBase     (0x02)
     IsBuildSite    (0x04)
     IsScorched     (0x10) v0.22
+    IsTownClaimed  (0x20) v0.26
 ```
 
 ## Rate Limiting and Caching
