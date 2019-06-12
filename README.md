@@ -81,10 +81,6 @@ All endpoints that return map data have the same response format:
 
   ...
  ],
-  "worldExtentsMinX" : -61645.926,
-  "worldExtentsMinY" : -84705.41,
-  "worldExtentsMaxX" : 78413.08,
-  "worldExtentsMaxY" : 82011.05,
   "warReport": {
         "totalEnlistments": 126,
         "colonialCasualties": 21,
@@ -96,10 +92,20 @@ All endpoints that return map data have the same response format:
 }
 ```
 
+World Extents:
+
+The minimum and maximum in-game world units. Used for mapping normalized coordinates to in-game coordinates.
+
+```
+WorldExtent.Minimum = (-109199.999997, -94499.99999580906968410989)
+WorldExtent.Maximum = (109199.999997, 94499.99999580906968410989)
+
+```
+Note: The previous field `worldExtents*` which was present in every map's data is now a constant and consistent value across all maps since they are all of the same size.
+
 Field descriptions:
 
 - `regionId`: internal region ID for this map
-- `worldExtents*`: minimum and maximum in-game world units. Used for mapping normalized coordinates to in-game coordinates.
 - `lastUpdated`: timestamp in milliseconds from epoch of when this map was last updated
 - `version`: version index, increments whenever this map data changes. Used for caching.
 
