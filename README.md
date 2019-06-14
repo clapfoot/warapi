@@ -21,6 +21,11 @@ All data returned by the API is JSON. The API is accessed only via HTTPS at `htt
 The base of all API requests is `https://war-service-live.foxholeservices.com/api`. In this documentation all API
 endpoints will be specified relative to this root.
 
+### Dev Branch
+
+When the dev branch is active, it's API will be available at: `https://war-service-dev.foxholeservices.com/api`. In general, any data 
+from this endpoint should not be considered final, and is subject to change frequently.
+
 ## API Endpoints
 
 ### Map Data
