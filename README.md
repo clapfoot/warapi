@@ -191,11 +191,12 @@ Warden
 ##### Map Flags
 
 ```
-    IsVictoryBase  (0x01)
-    IsHomeBase     (0x02)
-    IsBuildSite    (0x04)
-    IsScorched     (0x10) v0.22
-    IsTownClaimed  (0x20) v0.26
+    IsVictoryBase           (0x01)
+    IsHomeBase              (0x02)
+    IsBuildSite             (0x04)
+    IsDetectionAreaHidden   (0x08)
+    IsScorched              (0x10) v0.22
+    IsTownClaimed           (0x20) v0.26
 ```
 
 ## Rate Limiting and Caching
