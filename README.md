@@ -194,10 +194,11 @@ Warden
     IsVictoryBase           (0x01)
     IsHomeBase              (0x02)
     IsBuildSite             (0x04)
-    IsDetectionAreaHidden   (0x08)
     IsScorched              (0x10) v0.22
     IsTownClaimed           (0x20) v0.26
 ```
+
+Any other map flags not listed here are for internal use only, and should not be relied upon as they may be removed at any time.
 
 ## Rate Limiting and Caching
 
