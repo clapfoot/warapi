@@ -8,7 +8,8 @@ The War API allows developers to query information about the state of the curren
 1. [Schema](#schema)
 2. [Root Endpoint](#root-endpoint)
 3. [API Endpoints](#api-endpoints)
-    1. [Map Data](#map-data)
+    1. [War Data](#war-data)
+    2. [Map Data](#map-data)
 4. [Rate Limiting and Caching](#rate-limiting-and-caching)
 5. [Discord](#discord)
 
@@ -23,10 +24,36 @@ endpoints will be specified relative to this root.
 
 ### Dev Branch
 
-When the dev branch is active, it's API will be available at: `https://war-service-dev.foxholeservices.com/api`. In general, any data 
+When the dev branch is active, its API will be available at: `https://war-service-dev.foxholeservices.com/api`. In general, any data 
 from this endpoint should not be considered final, and is subject to change frequently.
 
 ## API Endpoints
+
+### War Data
+
+#### Get war state
+
+`GET /worldconquest/war`
+
+Field descriptions:
+
+- `warId`: unique id for the war.
+- `winner`: one of `NONE`, `WARDENS`, or `COLONIALS`.
+- `conquestStartTime`: unix time stamp for when conquest started, or null otherwise.
+- `conquestEndTime`: unix time stamp for when conquest ended, or null otherwise.
+- `resistanceStartTime`: unix time stamp for when resistance phase started, or null otherwise.
+- `requiredVictoryTowns`: number of victory towns required to win the war.
+
+```
+{
+  "warId" : "6cab6a66-1817-4888-af41-d1b31240ae68",
+  "winner" : "NONE",
+  "conquestStartTime" : 1560437650889,
+  "conquestEndTime" : null,
+  "resistanceStartTime" : null,
+  "requiredVictoryTowns" : 25
+}
+```
 
 ### Map Data
 
