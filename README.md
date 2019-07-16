@@ -31,7 +31,7 @@ from this endpoint should not be considered final, and is subject to change freq
 
 ### War Data
 
-#### Get war state
+#### Get war state (v0.27)
 
 `GET /worldconquest/war`
 
@@ -66,6 +66,21 @@ Field descriptions:
 Returns a list of the active World Conquest map names.
 
 Note: The maps `HomeRegionC` and `HomeRegionW` are returned here, but do not have map data available in this version.
+
+#### Get map war report (v0.27)
+
+`GET /worldconquest/warReport/:mapName`
+
+Returns the number of enlistments, casualties, and other map specific information.
+
+```
+{
+  "totalEnlistments" : 148,
+  "colonialCasualties" : 202,
+  "wardenCasualties" : 222,
+  "dayOfWar" : 2
+}
+```
 
 #### Get static map data
 
@@ -115,12 +130,6 @@ All endpoints that return map data have the same response format:
 
   ...
  ],
-  "warReport": {
-        "totalEnlistments": 126,
-        "colonialCasualties": 21,
-        "wardenCasualties": 16,
-        "dayOfWar": 5
-  },
   "lastUpdated" : 1524672871955,
   "version" : 2
 }
@@ -206,7 +215,7 @@ There might not necessarily be a Colonial/Warden version of an icon.  In this ca
 ```
 Colonial
 - (0.082283, 0.14996, 0.07036, 1.0)
-- RGB: (21, 38, 18)
+- RGB: (21, 38, 18, 255)
 - Hex Linear: 152612FF
 - Hex SRGB: 516C4BFF
 
