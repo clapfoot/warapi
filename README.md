@@ -47,7 +47,7 @@ Field descriptions:
 - `resistanceStartTime`: unix time stamp for when resistance phase started, or null if it hasn't started yet.
 - `requiredVictoryTowns`: number of victory towns required to win the war.
 
-The number of required victory towns that's returned by this endpoint represents a static configuration value and does not take any scorched victory towns into account.  This means that if you wish to determine how many victory towns are required to win the war, you must reduce it by one for each scorched victory town.  A scorched victory town is any map item that has both the IsVictoryBase and IsScorched flags set.  See the [Map Data](#map-data) section for more details.
+The number of required victory towns that's returned by this endpoint represents a static configuration value and does not take any scorched victory towns into account.  This means that if you wish to determine how many victory towns are required to win the war, you must reduce it by one for each scorched victory town.  A scorched victory town is any map item that has both the `IsVictoryBase` and `IsScorched` flags set.  See the [Map Data](#map-data) section for more details.
 
 _This data may update every 60 seconds._
 
