@@ -51,12 +51,13 @@ _This data may update every 60 seconds._
 
 ```
 {
-  "warId" : "6cab6a66-1817-4888-af41-d1b31240ae68",
+  "warId" : "9b33b555-e587-4915-89a5-50eb37f2949d",
+  "warNumber" : 33,
   "winner" : "NONE",
-  "conquestStartTime" : 1560437650889,
+  "conquestStartTime" : 1563291629686,
   "conquestEndTime" : null,
   "resistanceStartTime" : null,
-  "requiredVictoryTowns" : 25
+  "requiredVictoryTowns" : 20
 }
 ```
 
