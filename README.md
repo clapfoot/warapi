@@ -49,8 +49,6 @@ Field descriptions:
 
 The number of required victory towns that's returned by this endpoint represents a static configuration value and does not take any scorched victory towns into account.  This means that if you wish to determine how many victory towns are required to win the war, you must reduce it by one for each scorched victory town.  A scorched victory town is any map item that has both the `IsVictoryBase` and `IsScorched` flags set.  See the [Map Data](#map-data) section for more details.
 
-_This data may update every 60 seconds._
-
 ```
 {
   "warId" : "9b33b555-e587-4915-89a5-50eb37f2949d",
@@ -62,6 +60,8 @@ _This data may update every 60 seconds._
   "requiredVictoryTowns" : 20
 }
 ```
+
+_This data may update every 60 seconds._
 
 ### Map Data
 
