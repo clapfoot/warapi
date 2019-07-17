@@ -42,7 +42,7 @@ Field descriptions:
 - `warId`: unique id for the war.
 - `winner`: one of `NONE`, `WARDENS`, or `COLONIALS`.
 - `conquestStartTime`: unix time stamp for when conquest started, or null if it hasn't started yet.
-- `conquestEndTime`: unix time stamp for when conquest ended, or null if it hasn't started yet.
+- `conquestEndTime`: unix time stamp for when conquest ended, or null if it hasn't ended yet.
 - `resistanceStartTime`: unix time stamp for when resistance phase started, or null if it hasn't started yet.
 - `requiredVictoryTowns`: number of victory towns required to win the war.
 
