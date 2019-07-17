@@ -40,11 +40,14 @@ Returns data about the current state of the war.
 Field descriptions:
 
 - `warId`: unique id for the war.
+- `warNumber`: current war number for the shard.
 - `winner`: one of `NONE`, `WARDENS`, or `COLONIALS`.
 - `conquestStartTime`: unix time stamp for when conquest started, or null if it hasn't started yet.
 - `conquestEndTime`: unix time stamp for when conquest ended, or null if it hasn't ended yet.
 - `resistanceStartTime`: unix time stamp for when resistance phase started, or null if it hasn't started yet.
 - `requiredVictoryTowns`: number of victory towns required to win the war.
+
+_This data may update every 60 seconds._
 
 ```
 {
@@ -82,6 +85,8 @@ Returns the number of enlistments, casualties, and other map specific informatio
 }
 ```
 
+_This data may update every 3 seconds._
+
 #### Get static map data
 
 `GET /worldconquest/maps/:mapName/static`
@@ -100,7 +105,7 @@ static bases and static base build sites.
 
 Team-specific data for and forward bases are excluded.
 
-This data is updated every 5 minutes.
+_This data may update every 3 seconds._
 
 #### Map data schema
 
