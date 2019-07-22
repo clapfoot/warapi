@@ -40,7 +40,7 @@ Returns data about the current state of the war.
 Field descriptions:
 
 - `warId`: unique id for the war.
-- `warNumber`: current war number for the shard.
+- `warNumber`: current war number for the shard.  **WARNING: This is currently incorrectly reporting the next war number during resistance phase. https://github.com/clapfoot/warapi/issues/65**
 - `winner`: one of `NONE`, `WARDENS`, or `COLONIALS`.
 - `conquestStartTime`: unix time stamp for when conquest started, or null if it hasn't started yet.
 - `conquestEndTime`: unix time stamp for when conquest ended, or null if it hasn't ended yet.
