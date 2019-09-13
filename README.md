@@ -133,7 +133,8 @@ All endpoints that return map data have the same response format:
   "mapTextItems" : [ {
     "text" : "Abandoned Ward",
     "x" : 0.410076,
-    "y" : 0.4957782
+    "y" : 0.4957782,
+    "mapMarkerType": "Major"
   },
 
   ...
@@ -171,6 +172,7 @@ Map text item fields:
 
 - `text`: text string as it would appear on the map ingame
 - `x`, `y`: normalized map coordinate
+- `mapMarkerType`: "Major" or "Minor". Major markers form the basis of Region Zones. Minor markers simply indicate areas of interest on the map, but don't have major gameplay impact.
 
 ##### Map Icons
 
