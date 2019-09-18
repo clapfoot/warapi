@@ -240,13 +240,22 @@ Warden
 
 ```
     IsVictoryBase           (0x01)
-    IsHomeBase              (0x02)
+    IsHomeBase              (0x02) // Removed in v0.29
     IsBuildSite             (0x04)
     IsScorched              (0x10) v0.22
     IsTownClaimed           (0x20) v0.26
 ```
 
 Any other map flags not listed here are for internal use only, and should not be relied upon as they may be removed at any time.
+
+##### Rocket launches
+
+Each Rocket Site is a one time use launch site for Rockets.  When a Rocket is launched, the Rocket Site will become scorched, and its team id will be set to the faction that initiated the Rocket launch.
+
+This means that you can determine that a Rocket has launched based on the following conditions:
+- `iconType` is set to Rocket Site (37).  See [Map Icons](#map-icons)
+- `teamId` is set to `COLONIALS` or `WARDENS`.  See [Map Data Schema](#map-data-schema)
+- `flags` has `IsScorched` set.  See [Map Flags](#map-flags)
 
 ## Rate Limiting and Caching
 
