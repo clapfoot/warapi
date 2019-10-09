@@ -216,6 +216,7 @@ Map text item fields:
     Construction Yard   (39) v0.26
     Component Mine      (40) v0.26
     Oil Well            (41) v0.26
+    Cursed Fort         (44) v0.30 (Dead Harvest Event Only)
 ```
 
 ##### Map Icon Colours
