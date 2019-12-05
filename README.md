@@ -217,6 +217,10 @@ Map text item fields:
     Component Mine      (40) v0.26
     Oil Well            (41) v0.26
     Cursed Fort         (44) v0.30 (Dead Harvest Event Only)
+	
+	Relic Base 1        (45) v0.32
+	Relic Base 2        (46) v0.32
+	Relic Base 3        (47) v0.32
 ```
 
 ##### Map Icon Colours
