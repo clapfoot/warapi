@@ -221,6 +221,8 @@ Map text item fields:
 	Relic Base 1        (45) v0.32
 	Relic Base 2        (46) v0.32
 	Relic Base 3        (47) v0.32
+	
+	Mass Production Factory (51) v0.35
 ```
 
 ##### Map Icon Colours
