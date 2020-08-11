@@ -193,7 +193,7 @@ Map text item fields:
     Manufacturing Plant (16)
     Refinery            (17)
     Shipyard            (18)
-    Tech Center         (19)
+    Tech Center         (19) (Engineering Center in v0.37)
 
     Salvage Field       (20)
     Component Field     (21)
@@ -218,11 +218,13 @@ Map text item fields:
     Oil Well            (41) v0.26
     Cursed Fort         (44) v0.30 (Dead Harvest Event Only)
 	
-	Relic Base 1        (45) v0.32
-	Relic Base 2        (46) v0.32
-	Relic Base 3        (47) v0.32
+    Relic Base 1        (45) v0.32
+    Relic Base 2        (46) v0.32
+    Relic Base 3        (47) v0.32
 	
-	Mass Production Factory (51) v0.35
+    Mass Production Factory (51) v0.35
+    Seaport                 (52) v0.37
+    CoastalGun              (53) v0.37
 ```
 
 ##### Map Icon Colours
