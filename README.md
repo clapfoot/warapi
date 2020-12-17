@@ -216,7 +216,6 @@ Map text item fields:
     Construction Yard   (39) v0.26
     Component Mine      (40) v0.26
     Oil Well            (41) v0.26
-    Cursed Fort         (44) v0.30 (Dead Harvest Event Only)
 	
     Relic Base 1        (45) v0.32
     Relic Base 2        (46) v0.32
@@ -225,6 +224,7 @@ Map text item fields:
     Mass Production Factory (51) v0.35
     Seaport                 (52) v0.37
     CoastalGun              (53) v0.37
+	SoulFactory				(54) v0.39
 ```
 
 ##### Map Icon Colours
