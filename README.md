@@ -15,12 +15,18 @@ The War API allows developers to query information about the state of the curren
 
 ## Schema
 
-All data returned by the API is JSON. The API is accessed only via HTTPS at `https://war-service-live.foxholeservices.com`.
+All data returned by the API is JSON. The API is accessed only via HTTPS. 
 
 ## Root Endpoint
 
-The base of all API requests is `https://war-service-live.foxholeservices.com/api`. In this documentation all API
-endpoints will be specified relative to this root.
+The base of all API requests is `/api`. In this documentation all API endpoints will be specified relative to this root.
+
+The root endpoints for each shard are:
+
+| Shard | Root Endpoint URL | 
+|-------|------|
+| Live-1|https://war-service-live.foxholeservices.com/api|
+| Live-2|https://war-service-live-2.foxholeservices.com/api|
 
 ### Dev Branch
 
