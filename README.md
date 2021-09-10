@@ -183,9 +183,9 @@ Map text item fields:
 ##### Map Icons
 
 ```
-    StaticBase1         (5)
-    StaticBase2         (6)
-    StaticBase3         (7)
+    StaticBase1         (5) // Removed in v0.46
+    StaticBase2         (6) // Removed in v0.46
+    StaticBase3         (7) // Removed in v0.46
 
     ForwardBase1        (8)
     ForwardBase2        (9)
@@ -231,6 +231,11 @@ Map text item fields:
     Seaport                 (52) v0.37
     CoastalGun              (53) v0.37
 	SoulFactory				(54) v0.39
+	
+    Town Base 1        (56) v0.46
+    Town Base 2        (57) v0.46
+    Town Base 3        (58) v0.46
+	
 ```
 
 ##### Map Icon Colours
