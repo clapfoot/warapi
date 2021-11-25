@@ -230,7 +230,7 @@ Map text item fields:
     Mass Production Factory (51) v0.35
     Seaport                 (52) v0.37
     Coastal Gun             (53) v0.37
-    Soul Factory			(54) v0.39
+    Soul Factory            (54) v0.39
 	
     Town Base 1        (56) v0.46
     Town Base 2        (57) v0.46
