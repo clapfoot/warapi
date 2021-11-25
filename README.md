@@ -183,16 +183,16 @@ Map text item fields:
 ##### Map Icons
 
 ```
-    StaticBase1         (5) // Removed in v0.46
-    StaticBase2         (6) // Removed in v0.46
-    StaticBase3         (7) // Removed in v0.46
+    Static Base 1       (5) // Removed in v0.46
+    Static Base 2       (6) // Removed in v0.46
+    Static Base 3       (7) // Removed in v0.46
 
-    ForwardBase1        (8)
-    ForwardBase2        (9)
-    ForwardBase3        (10)
+    Forward Base 1      (8)
+    Forward Base 2      (9)
+    Forward Base 3      (10)
 
     Hospital            (11)
-    VehicleFactory      (12)
+    Vehicle Factory     (12)
     Armory              (13)
     Supply Station      (14)
     Workshop            (15)
@@ -229,13 +229,15 @@ Map text item fields:
 	
     Mass Production Factory (51) v0.35
     Seaport                 (52) v0.37
-    CoastalGun              (53) v0.37
-	SoulFactory				(54) v0.39
+    Coastal Gun             (53) v0.37
+	Soul Factory			(54) v0.39
 	
     Town Base 1        (56) v0.46
     Town Base 2        (57) v0.46
     Town Base 3        (58) v0.46
 	
+    Storm Cannon       (59) v0.48
+    Intel Center       (60) v0.48
 ```
 
 ##### Map Icon Colours
