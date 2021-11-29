@@ -236,8 +236,8 @@ Map text item fields:
     Town Base 2        (57) v0.46
     Town Base 3        (58) v0.46
 	
-    Storm Cannon       (59) v0.48
-    Intel Center       (60) v0.48
+    Storm Cannon       (59) v0.47
+    Intel Center       (60) v0.47
 ```
 
 ##### Map Icon Colours
