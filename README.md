@@ -112,7 +112,7 @@ You only need to request this once per map between World Conquests.
 Dynamic map data includes map icons that could change over the lifecycle of a map. This includes
 static bases and static base build sites.
 
-Team-specific data for and forward bases are excluded.
+Team-specific data and forward bases are excluded.
 
 _This data may update every 3 seconds._
 
