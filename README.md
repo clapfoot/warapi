@@ -188,8 +188,8 @@ Map text item fields:
     Static Base 3       (7) // Removed in v0.46
 
     Forward Base 1      (8)
-    Forward Base 2      (9)
-    Forward Base 3      (10)
+    Forward Base 2      (9) // Removed in v0.50
+    Forward Base 3      (10) // Removed in v0.50
 
     Hospital            (11)
     Vehicle Factory     (12)
@@ -221,7 +221,7 @@ Map text item fields:
     Salvage Mine        (38) v0.22
     Construction Yard   (39) v0.26
     Component Mine      (40) v0.26
-    Oil Well            (41) v0.26
+    Oil Well            (41) v0.26 // Removed in v0.50
 	
     Relic Base 1        (45) v0.32
     Relic Base 2        (46) v0.32
@@ -238,6 +238,9 @@ Map text item fields:
 	
     Storm Cannon       (59) v0.47
     Intel Center       (60) v0.47
+	
+    Coal Field         (61) v0.50
+    Oil Field          (62) v0.50
 ```
 
 ##### Map Icon Colours
