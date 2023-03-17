@@ -224,8 +224,8 @@ Map text item fields:
     Oil Well            (41) v0.26 // Removed in v0.50
 	
     Relic Base 1        (45) v0.32
-    Relic Base 2        (46) v0.32
-    Relic Base 3        (47) v0.32
+    Relic Base 2        (46) v0.32 // Deprecated in v0.52 until further notice (use Relic Base 1)
+    Relic Base 3        (47) v0.32 // Deprecated in v0.52 until further notice (use Relic Base 1)
 	
     Mass Production Factory (51) v0.35
     Seaport                 (52) v0.37
@@ -233,8 +233,8 @@ Map text item fields:
     Soul Factory            (54) v0.39
 	
     Town Base 1        (56) v0.46
-    Town Base 2        (57) v0.46
-    Town Base 3        (58) v0.46
+    Town Base 2        (57) v0.46 // Deprecated in v0.52 until further notice (use Town Base 1)
+    Town Base 3        (58) v0.46 // Deprecated in v0.52 until further notice (use Town Base 1)
 	
     Storm Cannon       (59) v0.47
     Intel Center       (60) v0.47
