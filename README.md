@@ -193,10 +193,10 @@ Map text item fields:
 
     Hospital            (11)
     Vehicle Factory     (12)
-    Armory              (13)
-    Supply Station      (14)
-    Workshop            (15)
-    Manufacturing Plant (16)
+    Armory              (13) // Removed in previous update
+    Supply Station      (14) // Removed in previous update
+    Workshop            (15) // Removed in previous update
+    Manufacturing Plant (16) // Removed in previous update
     Refinery            (17)
     Shipyard            (18)
     Tech Center         (19) (Engineering Center in v0.37)
@@ -216,7 +216,7 @@ Map text item fields:
     Storage Facility    (33) v0.17
     Factory             (34) v0.17
     Garrison Station    (35) v0.20
-    Ammo Factory        (36) v0.20
+    Ammo Factory        (36) v0.20 // Removed in previous update
     Rocket Site         (37) v0.20
     Salvage Mine        (38) v0.22
     Construction Yard   (39) v0.26
