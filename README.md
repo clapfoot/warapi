@@ -183,13 +183,13 @@ Map text item fields:
 ##### Map Icons
 
 ```
-    Static Base 1       (5) // Removed in v0.46
-    Static Base 2       (6) // Removed in v0.46
-    Static Base 3       (7) // Removed in v0.46
+    Static Base 1       (5) // Removed in Update 46
+    Static Base 2       (6) // Removed in Update 46
+    Static Base 3       (7) // Removed in Update 46
 
     Forward Base 1      (8)
-    Forward Base 2      (9) // Removed in v0.50
-    Forward Base 3      (10) // Removed in v0.50
+    Forward Base 2      (9) // Removed in Update 50
+    Forward Base 3      (10) // Removed in Update 50
 
     Hospital            (11)
     Vehicle Factory     (12)
@@ -199,7 +199,7 @@ Map text item fields:
     Manufacturing Plant (16) // Removed in previous update
     Refinery            (17)
     Shipyard            (18)
-    Tech Center         (19) (Engineering Center in v0.37)
+    Tech Center         (19) (Engineering Center in Update 37)
 
     Salvage Field       (20)
     Component Field     (21)
@@ -208,39 +208,45 @@ Map text item fields:
     World Map Tent      (24)
     Travel Tent         (25)
     Training Area       (26)
-    Special Base (Keep) (27) v0.14
-    Observation Tower   (28) v0.14
-    Fort                (29) v0.14
-    Troop Ship          (30) v0.14
-    Sulfur Mine         (32) v0.16
-    Storage Facility    (33) v0.17
-    Factory             (34) v0.17
-    Garrison Station    (35) v0.20
-    Ammo Factory        (36) v0.20 // Removed in previous update
-    Rocket Site         (37) v0.20
-    Salvage Mine        (38) v0.22
-    Construction Yard   (39) v0.26
-    Component Mine      (40) v0.26
-    Oil Well            (41) v0.26 // Removed in v0.50
+    Special Base (Keep) (27) Update 14
+    Observation Tower   (28) Update 14
+    Fort                (29) Update 14
+    Troop Ship          (30) Update 14
+    Sulfur Mine         (32) Update 16
+    Storage Facility    (33) Update 17
+    Factory             (34) Update 17
+    Garrison Station    (35) Update 20
+    Ammo Factory        (36) // Removed in previous update
+    Rocket Site         (37) Update 20
+    Salvage Mine        (38) Update 22
+    Construction Yard   (39) Update 26
+    Component Mine      (40) Update 26
+    Oil Well            (41) // Removed in Update 50
 	
-    Relic Base 1        (45) v0.32
-    Relic Base 2        (46) v0.32 // Deprecated in v0.52 until further notice (use Relic Base 1)
-    Relic Base 3        (47) v0.32 // Deprecated in v0.52 until further notice (use Relic Base 1)
+    Relic Base 1        (45) Update 32
+    Relic Base 2        (46) // Removed in Update 52 until further notice (use Relic Base 1)
+    Relic Base 3        (47) // Removed in Update 52 until further notice (use Relic Base 1)
 	
-    Mass Production Factory (51) v0.35
-    Seaport                 (52) v0.37
-    Coastal Gun             (53) v0.37
-    Soul Factory            (54) v0.39
+    Mass Production Factory (51) Update 35
+    Seaport                 (52) Update 37
+    Coastal Gun             (53) Update 37
+    Soul Factory            (54) Update 39
 	
-    Town Base 1        (56) v0.46
-    Town Base 2        (57) v0.46 // Deprecated in v0.52 until further notice (use Town Base 1)
-    Town Base 3        (58) v0.46 // Deprecated in v0.52 until further notice (use Town Base 1)
+    Town Base 1        (56) Update 46
+    Town Base 2        (57) // Removed in Update 52 until further notice (use Town Base 1)
+    Town Base 3        (58) // Removed in Update 52 until further notice (use Town Base 1)
 	
-    Storm Cannon       (59) v0.47
-    Intel Center       (60) v0.47
+    Storm Cannon       (59) Update 47
+    Intel Center       (60) Update 47
 	
-    Coal Field         (61) v0.50
-    Oil Field          (62) v0.50
+    Coal Field         (61) Update 50
+    Oil Field          (62) Update 50
+	
+	Rocket Target            (70) Update 54
+	Rocket Ground Zero       (71) Update 54
+	Rocket Site With Rocket  (72) Update 54
+	
+	Facility Mine Oil Rig    (75) Update 54
 ```
 
 ##### Map Icon Colours
@@ -273,14 +279,18 @@ Warden
 
 Any other map flags not listed here are for internal use only, and should not be relied upon as they may be removed at any time.
 
-##### Rocket launches
+##### A0E-9 Rocket Launches (Update 54)
 
-Each Rocket Site is a one time use launch site for Rockets.  When a Rocket is launched, the Rocket Site will become scorched, and its team id will be set to the faction that initiated the Rocket launch.
+Rocket Site, Rocket Site With Rocket, Rocket Target, and Rocket Ground Zero are all public team based map icons that show up for both factions.
 
-This means that you can determine that a Rocket has launched based on the following conditions:
-- `iconType` is set to Rocket Site (37).  See [Map Icons](#map-icons)
-- `teamId` is set to `COLONIALS` or `WARDENS`.  See [Map Data Schema](#map-data-schema)
-- `flags` has `IsScorched` set.  See [Map Flags](#map-flags)
+Rocket Site - Shows when a rocket site is present.
+Rocket Site With Rocket - Shows when a rocket site has a rocket present.
+Rocket Target - Shows when a rocket has targeted a location for launch.
+Rocket Ground Zero - Shows when a rocket has hit the targeted location.
+
+If you wish to write logic that corresponds to a rocket hitting a location, then relying on a Rocket Ground Zero appearing is the best option.
+
+See [Map Data Schema](#map-data-schema) and [Map Icons](#map-icons) for more information.
 
 ## Rate Limiting and Caching
 
