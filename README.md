@@ -242,11 +242,11 @@ Map text item fields:
     Coal Field         (61) Update 50
     Oil Field          (62) Update 50
 	
-	Rocket Target            (70) Update 54
-	Rocket Ground Zero       (71) Update 54
-	Rocket Site With Rocket  (72) Update 54
+    Rocket Target            (70) Update 54
+    Rocket Ground Zero       (71) Update 54
+    Rocket Site With Rocket  (72) Update 54
 	
-	Facility Mine Oil Rig    (75) Update 54
+    Facility Mine Oil Rig    (75) Update 54
 ```
 
 ##### Map Icon Colours
@@ -283,10 +283,12 @@ Any other map flags not listed here are for internal use only, and should not be
 
 Rocket Site, Rocket Site With Rocket, Rocket Target, and Rocket Ground Zero are all public team based map icons that show up for both factions.
 
+```
 Rocket Site - Shows when a rocket site is present.
 Rocket Site With Rocket - Shows when a rocket site has a rocket present.
 Rocket Target - Shows when a rocket has targeted a location for launch.
 Rocket Ground Zero - Shows when a rocket has hit the targeted location.
+```
 
 If you wish to write logic that corresponds to a rocket hitting a location, then relying on a Rocket Ground Zero appearing is the best option.
 
