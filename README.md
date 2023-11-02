@@ -27,6 +27,7 @@ The root endpoints for each shard are:
 |-------|------|
 | Live-1|https://war-service-live.foxholeservices.com/api|
 | Live-2|https://war-service-live-2.foxholeservices.com/api|
+| Live-3|https://war-service-live-3.foxholeservices.com/api|
 
 ### Dev Branch
 
