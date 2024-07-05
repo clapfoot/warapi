@@ -123,7 +123,7 @@ paths:
   
   /worldconquest/maps/{mapName}/dynamic/public:
     get:
-      summary: Get static map data
+      summary: Get dynamic map data
       description: |
         Dynamic map data includes map icons that could change over the lifecycle of a map. This includes static bases and static base build sites.
         
