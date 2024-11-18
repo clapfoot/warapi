@@ -248,6 +248,9 @@ Map text item fields:
     Rocket Site With Rocket  (72) Update 54
 	
     Facility Mine Oil Rig    (75) Update 54
+	
+	Weather Station		(83) Update 57
+	Mortar House 		(84) Update 58
 ```
 
 ##### Map Icon Colours
