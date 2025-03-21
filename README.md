@@ -249,8 +249,8 @@ Map text item fields:
 	
     Facility Mine Oil Rig    (75) Update 54
 	
-	Weather Station		(83) Update 57
-	Mortar House 		(84) Update 58
+    Weather Station		(83) Update 57
+    Mortar House 		(84) Update 58
 ```
 
 ##### Map Icon Colours
