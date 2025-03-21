@@ -234,8 +234,8 @@ Map text item fields:
     Soul Factory            (54) Update 39
 	
     Town Base 1        (56) Update 46
-    Town Base 2        (57) // Removed in Update 52 until further notice (use Town Base 1)
-    Town Base 3        (58) // Removed in Update 52 until further notice (use Town Base 1)
+    Town Base 2        (57) Update 46
+    Town Base 3        (58) Update 46
 	
     Storm Cannon       (59) Update 47
     Intel Center       (60) Update 47
