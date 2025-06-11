@@ -52,7 +52,9 @@ Field descriptions:
 - `conquestStartTime`: unix time stamp for when conquest started, or null if it hasn't started yet.
 - `conquestEndTime`: unix time stamp for when conquest ended, or null if it hasn't ended yet.
 - `resistanceStartTime`: unix time stamp for when resistance phase started, or null if it hasn't started yet.
+- `scheduledConquestEndTime`: unix time stamp for when the short conquest is scheduled to end, null if it's not a short conquest or the conquest has reached resistance phase. (Update 61)
 - `requiredVictoryTowns`: number of victory towns required to win the war.
+- `shortRequiredVictoryTowns`: number of victory towns required to win when the scheduled conquest end time is reached if it's set. (Update 61)
 
 The number of required victory towns that's returned by this endpoint represents a static configuration value and does not take any scorched victory towns into account.  This means that if you wish to determine how many victory towns are required to win the war, you must reduce it by one for each scorched victory town.  A scorched victory town is any map item that has both the `IsVictoryBase` and `IsScorched` flags set.  See the [Map Data](#map-data) section for more details.
 
@@ -64,8 +66,11 @@ The number of required victory towns that's returned by this endpoint represents
   "conquestStartTime" : 1563291629686,
   "conquestEndTime" : null,
   "resistanceStartTime" : null,
+  "scheduledConquestEndTime: null,
   "requiredVictoryTowns" : 20
+  "shortRequiredVictoryTowns" : 0
 }
+ 
 ```
 
 _This data may update every 60 seconds._
