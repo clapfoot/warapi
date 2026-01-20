@@ -256,6 +256,12 @@ Map text item fields:
 	
     Weather Station    (83) Update 57
     Mortar House       (84) Update 58
+	
+    Aircraft Depot         (88) Update 63
+    Aircraft Factory       (89) Update 63
+    Aircraft Radar         (90) Update 63
+    Aircraft Runway (T1)   (91) Update 63
+    Aircraft Runway (T2)   (92) Update 63
 ```
 
 ##### Map Icon Colours
