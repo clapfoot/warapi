@@ -1,0 +1,500 @@
+openapi: 3.1.0
+info:
+  title: Foxhole API
+  description: |
+    ## World Extents:
+    
+    The minimum and maximum in-game world units. Used for mapping normalized coordinates to in-game coordinates.
+    
+    ```
+    WorldExtent.Minimum = (-109199.999997, -94499.99999580906968410989)
+    WorldExtent.Maximum = (109199.999997, 94499.99999580906968410989)
+    ```
+    
+    Note: The previous field worldExtents* which was present in every map's data is now a constant and consistent value across all maps since they are all of the same size.
+    ## Map Icon Colours
+    There might not necessarily be a Colonial/Warden version of an icon. In this case, it is recommended to use these colours for rendering Colonial and Warden versions of that icon.
+    
+    Colonial
+    - `(0.082283, 0.14996, 0.07036, 1.0)`
+    - RGB: `(21, 38, 18, 255)`
+    - Hex Linear: `152612FF`
+    - Hex SRGB: `516C4BFF`
+    
+    Warden
+    - `(0.017642, 0.093059, 0.223228, 1.0)`
+    - RGB: `(4, 23, 57, 255)`
+    - Hex Linear: `041739FF`
+    - Hex SRGB: `245682FF`
+    
+    ## A0E-9 Rocket Launches (Update 54)
+    Rocket Site, Rocket Site With Rocket, Rocket Target, and Rocket Ground Zero are all public team based map icons that show up for both factions.
+    
+    Rocket Site - Shows when a rocket site is present.
+    Rocket Site With Rocket - Shows when a rocket site has a rocket present.
+    Rocket Target - Shows when a rocket has targeted a location for launch.
+    Rocket Ground Zero - Shows when a rocket has hit the targeted location.
+    If you wish to write logic that corresponds to a rocket hitting a location, then relying on a Rocket Ground Zero appearing is the best option.
+    ## Rate Limiting and Caching
+    We ask that you respect the caching headers as returned by the API. They reflect the lifetime of the data returned in the body of the request and requests sooner than the cache expiry will return the same data.
+    
+    The API fully supports ETags. API responses include the ETag header. When you make an API request, include the If-None-Match header with the value of the ETag you last received from that endpoint. If the server returns 304 Not Modified, then your cached data is still the latest version.
+    
+    It is good practice to use the ETag, as even though the cache may have expired the underlying data may not have changed. For example in the case of dynamic map data, if no bases have changed teams within 5 minutes, the cache will have expired but requests using the ETag will return 304 Not Modified, preventing wasting bandwidth on duplicate data.
+    
+    ## Discord
+    If you're looking for assistance or just want to chat about the WarAPI, there is a discord channel called code-talk on the official Foxhole discord.  
+  version: 1.0.0
+servers:
+  - url: https://war-service-live.foxholeservices.com/api
+    description: Live server (Abel)
+  - url: https://war-service-live-2.foxholeservices.com/api
+    description: Live server 2 (Baker)
+  - url: https://war-service-live-3.foxholeservices.com/api
+    description: Live server 3 (Charlie)
+  - url: https://war-service-dev.foxholeservices.com/api
+    description: Development server
+
+paths:
+  /worldconquest/war:
+    get:
+      summary: Get war state (v0.27)
+      description: |
+        Returns data about the current state of the war.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/War'
+  
+  /worldconquest/maps:
+    get:
+      summary: List map names
+      description: |
+        Returns a list of the active World Conquest map names.
+        
+        **Note:** The maps HomeRegionC and HomeRegionW are returned here, but do not have map data available in this version.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                description: Name of active World Conquest maps of current war.
+                items:
+                  $ref: '#/components/schemas/Map'
+  
+  /worldconquest/warReport/{mapName}:
+    get:
+      summary: Get map war report (v0.27)
+      description: |
+        Returns the number of enlistments, casualties, and other map specific information.
+        
+        *This data may update every 3 seconds.*
+      parameters:
+        - $ref: '#/components/parameters/mapName'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WarReport'
+  
+  /worldconquest/maps/{mapName}/static:
+    get:
+      summary: Get static map data
+      description: |
+        Static map data includes things that never change over the lifecycle of a map. This includes map text labels, resource nodes, and world structures.
+        
+        *You only need to request this once per map between World Conquests.*
+      parameters:
+        - $ref: '#/components/parameters/mapName'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StaticMap'
+  
+  /worldconquest/maps/{mapName}/dynamic/public:
+    get:
+      summary: Get dynamic map data
+      description: |
+        Dynamic map data includes map icons that could change over the lifecycle of a map. This includes static bases and static base build sites.
+        
+        Team-specific data and forward bases are excluded.
+        
+        **This data may update every 3 seconds.**
+      parameters:
+        - $ref: '#/components/parameters/mapName'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DynamicMap'
+
+
+
+components:
+  parameters:
+    mapName:
+      name: mapName
+      in: path
+      required: true
+      description: The name of the map to return.
+      schema:
+        $ref: '#/components/schemas/Map'
+  schemas:
+    Map:
+      type: string
+      description: Name of map names
+      enum:
+        - TheFingersHex
+        - TempestIslandHex
+        - GreatMarchHex
+        - MarbanHollow
+        - ViperPitHex
+        - BasinSionnachHex
+        - StemaLandingHex
+        - DeadLandsHex
+        - HeartlandsHex
+        - EndlessShoreHex
+        - WestgateHex
+        - OarbreakerHex
+        - AcrithiaHex
+        - MooringCountyHex
+        - WeatheredExpanseHex
+        - ReaversPassHex
+        - MorgensCrossingHex
+        - LochMorHex
+        - StonecradleHex
+        - KalokaiHex
+        - AllodsBightHex
+        - RedRiverHex
+        - OriginHex
+        - ClahstraHex
+        - HowlCountyHex
+        - SpeakingWoodsHex
+        - ShackledChasmHex
+        - TerminusHex
+        - LinnMercyHex
+        - ClansheadValleyHex
+        - GodcroftsHex
+        - NevishLineHex
+        - CallumsCapeHex
+        - FishermansRowHex
+        - ReachingTrailHex
+        - UmbralWildwoodHex
+        - StlicanShelfHex
+        - CallahansPassageHex
+        - KingsCageHex
+        - AshFieldsHex
+        - DrownedValeHex
+        - FarranacCoastHex
+        - SableportHex
+    War:
+      type: object
+      description: |
+        Returns data about the current state of the war.
+        This data may update every 60 seconds.
+      properties:
+        warId:
+          type: string
+          description: unique id for the war
+        warNumber:
+          type: integer
+          description: current war number for the shard
+        winner:
+          type: string
+          description: The winner faction
+          enum:
+            - COLONIALS
+            - WARDENS
+            - NONE
+        conquestStartTime:
+          type: integer
+          format: int64
+          description: unix time stamp (ms) for when conquest started, or null if it hasn't started yet.
+        conquestEndTime:
+          type: integer
+          format: int64
+          description: unix time stamp (ms) for when conquest ended, or null if it hasn't ended yet.
+        resistanceStartTime:
+          type: integer
+          format: int64
+          description: unix time stamp (ms) for when resistance phase started, or null if it hasn't started yet.
+        requiredVictoryTowns:
+          type: integer
+          description: |
+            number of victory towns required to win the war. 
+            The number of required victory towns that's returned by this endpoint represents a static configuration value
+            and does not take any scorched victory towns into account.
+            This means that if you wish to determine how many victory towns are required to win the war,
+            you must reduce it by one for each scorched victory town.
+            A scorched victory town is any map item that has both the IsVictoryBase and IsScorched flags set.
+
+    WarReport:
+      type: object
+      properties:
+        totalEnlistments:
+          type: integer
+        colonialCasualties:
+          type: integer
+        wardenCasualties:
+          type: integer
+        dayOfWar:
+          type: integer
+        version:
+          type: integer
+
+    StaticMap:
+      type: object
+      properties:
+        regionId:
+          type: integer
+          description: internal region ID for this map
+        scorchedVictoryTowns:
+          type: integer
+        lastUpdated:
+          type: integer
+          format: int64
+          description: timestamp in milliseconds from epoch of when this map was last updated
+        version:
+          type: integer
+          description:  version index, increments whenever this map data changes. Used for caching.
+        mapItems:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+        mapItemsC:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+        mapItemsW:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+        mapTextItems:
+          type: array
+          items:
+            type: object
+            properties:
+              text:
+                type: string
+                description: text string as it would appear on the map ingame
+              x:
+                type: number
+                description: normalized map coordinate
+              y:
+                type: number
+                description: normalized map coordinate
+              mapMarkerType:
+                type: string
+                description:  Major markers form the basis of Region Zones. Minor markers simply indicate areas of interest on the map, but don't have major gameplay impact.
+                enum:
+                  - Major
+                  - Minor
+
+    DynamicMap:
+      type: object
+      properties:
+        regionId:
+          type: integer
+          description: internal region ID for this map
+        scorchedVictoryTowns:
+          type: integer
+        lastUpdated:
+          type: integer
+          format: int64
+          description: timestamp in milliseconds from epoch of when this map was last updated
+        version:
+          type: integer
+          description:  version index, increments whenever this map data changes. Used for caching.
+        mapItems:
+          type: array
+          items:
+            type: object
+            properties:
+              teamId:
+                type: string
+                description: current faction
+                enum:
+                  - NONE
+                  - WARDENS
+                  - COLONIALS
+              iconType:
+                type: integer
+                oneOf:
+                  - const: 5
+                    description: Static Base 1 (Removed in Update 46)
+                  - const: 6
+                    description: Static Base 2 (Removed in Update 46)
+                  - const: 7
+                    description: Static Base 3 (Removed in Update 46)
+                  - const: 8
+                    description: Forward Base 1
+                  - const: 9
+                    description: Forward Base 2 (Removed in Update 50)
+                  - const: 10
+                    description: Forward Base 3 (Removed in Update 50)
+                  - const: 11
+                    description: Hospital
+                  - const: 12
+                    description: Vehicle Factory
+                  - const: 13
+                    description: Armory (Removed in previous update)
+                  - const: 14
+                    description: Supply Station (Removed in previous update)
+                  - const: 15
+                    description: Workshop (Removed in previous update)
+                  - const: 16
+                    description: Manufacturing Plant (Removed in previous update)
+                  - const: 17
+                    description: Refinery
+                  - const: 18
+                    description: Shipyard
+                  - const: 19
+                    description: Tech Center (Engineering Center in Update 37)
+                  - const: 20
+                    description: Salvage Field
+                  - const: 21
+                    description: Component Field
+                  - const: 22
+                    description: Fuel Field
+                  - const: 23
+                    description: Sulfur Field
+                  - const: 24
+                    description: World Map Tent
+                  - const: 25
+                    description: Travel Tent
+                  - const: 26
+                    description: Training Area
+                  - const: 27
+                    description: Special Base (Keep) (Update 14)
+                  - const: 28
+                    description: Observation Tower (Update 14)
+                  - const: 29
+                    description: Fort (Update 14)
+                  - const: 30
+                    description: Troop Ship (Update 14)
+                  - const: 32
+                    description: Sulfur Mine (Update 16)
+                  - const: 33
+                    description: Storage Facility (Update 17)
+                  - const: 34
+                    description: Factory (Update 17)
+                  - const: 35
+                    description: Garrison Station (Update 20)
+                  - const: 36
+                    description: Ammo Factory (Removed in previous update)
+                  - const: 37
+                    description: Rocket Site (Update 20)
+                  - const: 38
+                    description: Salvage Mine (Update 22)
+                  - const: 39
+                    description: Construction Yard (Update 26)
+                  - const: 40
+                    description: Component Mine (Update 26)
+                  - const: 41
+                    description: Oil Well (Removed in Update 50)
+                  - const: 45
+                    description: Relic Base 1 (Update 32)
+                  - const: 46
+                    description: Relic Base 2 (Removed in Update 52 until further notice, use Relic Base 1)
+                  - const: 47
+                    description: Relic Base 3 (Removed in Update 52 until further notice, use Relic Base 1)
+                  - const: 51
+                    description: Mass Production Factory (Update 35)
+                  - const: 52
+                    description: Seaport (Update 37)
+                  - const: 53
+                    description: Coastal Gun (Update 37)
+                  - const: 54
+                    description: Soul Factory (Update 39)
+                  - const: 56
+                    description: Town Base 1 (Update 46)
+                  - const: 57
+                    description: Town Base 2 (Removed in Update 52 until further notice, use Town Base 1)
+                  - const: 58
+                    description: Town Base 3 (Removed in Update 52 until further notice, use Town Base 1)
+                  - const: 59
+                    description: Storm Cannon (Update 47)
+                  - const: 60
+                    description: Intel Center (Update 47)
+                  - const: 61
+                    description: Coal Field (Update 50)
+                  - const: 62
+                    description: Oil Field (Update 50)
+                  - const: 70
+                    description: Rocket Target (Update 54)
+                  - const: 71
+                    description: Rocket Ground Zero (Update 54)
+                  - const: 72
+                    description: Rocket Site With Rocket (Update 54)
+                  - const: 75
+                    description: Facility Mine Oil Rig (Update 54)
+                  - const: 83
+                    description: Weather Station (Update 55)
+                description: the type of the map icon
+              x:
+                type: number
+                description: normalized map coordinate
+              y:
+                type: number
+                description: normalized map coordinate
+              flags:
+                type: integer
+                description: |
+                  bitmask of flags that apply to this icon
+                  
+                  ```
+                  IsVictoryBase           (0x01)
+                  IsHomeBase              (0x02) // Removed in Update 29
+                  IsBuildSite             (0x04)
+                  IsScorched              (0x10) Update 22
+                  IsTownClaimed           (0x20) Update 26
+                  ```
+                  
+                  Any other map flags not listed here are for internal use only, and should not be relied upon as they may be removed at any time.
+              viewDirection:
+                type: integer
+                description: Always 0 (not exposed in public API)
+
+        mapItemsC:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+        mapItemsW:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+        mapTextItems:
+          type: array
+          description: Always empty
+          items:
+            type: string
+            maxItems: 0
+          example: []
+
