@@ -1,0 +1,314 @@
+{
+    "BuildingTypes": {
+        "5": {
+            "name": "Static Base 1",
+            "comment": "Removed in Update 46",
+            "isActive": false
+        },
+        "6": {
+            "name": "Static Base 2",
+            "comment": "Removed in Update 46",
+            "isActive": false
+        },
+        "7": {
+            "name": "Static Base 3",
+            "comment": "Removed in Update 46",
+            "isActive": false
+        },
+        "8": {
+            "name": "Forward Base 1",
+            "comment": "",
+            "isActive": true
+        },
+        "9": {
+            "name": "Forward Base 2",
+            "comment": "Removed in Update 50",
+            "isActive": false
+        },
+        "10": {
+            "name": "Forward Base 1",
+            "comment": "Removed in Update 50",
+            "isActive": false
+        },
+        "11": {
+            "name": "Hospital",
+            "comment": "",
+            "isActive": true
+        },
+        "12": {
+            "name": "Vehicle Factory",
+            "comment": "",
+            "isActive": true
+        },
+        "13": {
+            "name": "Armory",
+            "comment": "Removed in previous update",
+            "isActive": false
+        },
+        "14": {
+            "name": "Supply Station",
+            "comment": "Removed in previous update",
+            "isActive": false
+        },
+        "15": {
+            "name": "Workshop",
+            "comment": "Removed in previous update",
+            "isActive": false
+        },
+        "16": {
+            "name": "Manufacturing Plant",
+            "comment": "Removed in previous update",
+            "isActive": false
+        },
+        "17": {
+            "name": "Refinery",
+            "comment": "",
+            "isActive": true
+        },
+        "18": {
+            "name": "Shipyard",
+            "comment": "",
+            "isActive": true
+        },
+        "19": {
+            "name": "Tech Center",
+            "comment": "Engineering Center in Update 37",
+            "isActive": true
+        },
+        "20": {
+            "name": "Salvage Field",
+            "comment": "",
+            "isActive": true
+        },
+        "21": {
+            "name": "Component Field",
+            "comment": "",
+            "isActive": true
+        },
+        "22": {
+            "name": "Fuel Field",
+            "comment": "",
+            "isActive": true
+        },
+        "23": {
+            "name": "Sulfur Field",
+            "comment": "",
+            "isActive": true
+        },
+        "24": {
+            "name": "World Map Tent",
+            "comment": "",
+            "isActive": true
+        },
+        "25": {
+            "name": "Travel Tent",
+            "comment": "",
+            "isActive": true
+        },
+        "26": {
+            "name": "Training Area",
+            "comment": "",
+            "isActive": true
+        },
+        "27": {
+            "name": "Special Base (Keep)",
+            "comment": "Update 14",
+            "isActive": true
+        },
+        "28": {
+            "name": "Observation Tower",
+            "comment": "Update 14",
+            "isActive": true
+        },
+        "29": {
+            "name": "Fort",
+            "comment": "Update 14",
+            "isActive": true
+        },
+        "30": {
+            "name": "Troop Ship",
+            "comment": "Update 14",
+            "isActive": true
+        },
+        "32": {
+            "name": "Sulfur Mine",
+            "comment": "Update 16",
+            "isActive": true
+        },
+        "33": {
+            "name": "Storage Facility",
+            "comment": "Update 17",
+            "isActive": true
+        },
+        "34": {
+            "name": "Factory",
+            "comment": "Update 17",
+            "isActive": true
+        },
+        "35": {
+            "name": "Garrison Station",
+            "comment": "Update 20",
+            "isActive": true
+        },
+        "36": {
+            "name": "Ammo Factory",
+            "comment": "Removed in previous update",
+            "isActive": false
+        },
+        "37": {
+            "name": "Rocket Site",
+            "comment": "Update 20",
+            "isActive": true
+        },
+        "38": {
+            "name": "Salvage Mine",
+            "comment": "Update 22",
+            "isActive": true
+        },
+        "39": {
+            "name": "Construction Yard",
+            "comment": "Update 26",
+            "isActive": true
+        },
+        "40": {
+            "name": "Component Mine",
+            "comment": "Update 26",
+            "isActive": true
+        },
+        "41": {
+            "name": "Oil Well",
+            "comment": "Removed in Update 50",
+            "isActive": false
+        },
+        "45": {
+            "name": "Relic Base 1",
+            "comment": "Update 32",
+            "isActive": true
+        },
+        "46": {
+            "name": "Relic Base 2",
+            "comment": "Removed in Update 52 until further notice (use Relic Base 1)",
+            "isActive": false
+        },
+        "47": {
+            "name": "Relic Base 3",
+            "comment": "Removed in Update 52 until further notice (use Relic Base 1)",
+            "isActive": false
+        },
+        "51": {
+            "name": "Mass Production Factory",
+            "comment": "Update 35",
+            "isActive": true
+        },
+        "52": {
+            "name": "Seaport",
+            "comment": "Update 37",
+            "isActive": true
+        },
+        "53": {
+            "name": "Coastal Gun",
+            "comment": "Update 37",
+            "isActive": true
+        },
+        "54": {
+            "name": "Soul Factory",
+            "comment": "Update 39",
+            "isActive": true
+        },
+        "56": {
+            "name": "Town Base 1",
+            "comment": "Update 46",
+            "isActive": true
+        },
+        "57": {
+            "name": "Town Base 2",
+            "comment": "Update 46",
+            "isActive": true
+        },
+        "58": {
+            "name": "Town Base 3",
+            "comment": "Update 46",
+            "isActive": true
+        },
+        "59": {
+            "name": "Storm Cannon",
+            "comment": "Update 47",
+            "isActive": true
+        },
+        "60": {
+            "name": "Intel Center",
+            "comment": "Update 47",
+            "isActive": true
+        },
+        "61": {
+            "name": "Coal Field",
+            "comment": "Update 50",
+            "isActive": true
+        },
+        "62": {
+            "name": "Oil Field",
+            "comment": "Update 50",
+            "isActive": true
+        },
+        "70": {
+            "name": "Rocket Target",
+            "comment": "Update 54",
+            "isActive": true
+        },
+        "71": {
+            "name": "Rocket Ground Zero",
+            "comment": "Update 54",
+            "isActive": true
+        },
+        "72": {
+            "name": "Rocket Site With Rocket",
+            "comment": "Update 54",
+            "isActive": true
+        },
+        "75": {
+            "name": "Facility Mine Oil Rig",
+            "comment": "Update 54",
+            "isActive": true
+        },
+        "83": {
+            "name": "Weather Station",
+            "comment": "Update 57",
+            "isActive": true
+        },
+        "84": {
+            "name": "Mortar House",
+            "comment": "Update 58",
+            "isActive": true
+        },
+        "88": {
+            "name": "Aircraft Depot",
+            "comment": "Update 63",
+            "isActive": true
+        },
+        "89": {
+            "name": "Aircraft Factory",
+            "comment": "Update 63",
+            "isActive": true
+        },
+        "90": {
+            "name": "Aircraft Radar",
+            "comment": "Update 63",
+            "isActive": true
+        },
+        "91": {
+            "name": "Aircraft Runway (T1)",
+            "comment": "Update 63",
+            "isActive": true
+        },
+        "92": {
+            "name": "Aircraft Runway (T2)",
+            "comment": "Update 63",
+            "isActive": true
+        },
+        "97": {
+            "name": "Anti-Aircraft Artillery",
+            "comment": "Update 65",
+            "isActive": true
+        }
+    }
+}
